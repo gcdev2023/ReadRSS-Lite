@@ -1,0 +1,41 @@
+Table feed{
+  link_atom_feed string [pk]
+  link_feed string [pk]
+  title_feed string
+  description string
+  logo_feed string
+  pudDate_feed datetime
+  channel_id string [ref: > channel.channel_id]
+}
+
+Table emty{
+  link_emty string [pk]
+  title_emty string
+  description_emty string
+  image_emty string
+  pubDate_emty datetime
+  link_feed string [ref: > feed.link_feed]
+  link_atom_feed string [ref: > feed.link_atom_feed]
+  channel_id string [ref: > feed.channel_id]
+}
+
+
+Table channel{
+  channel_id string [pk]
+  channel_name string
+  server_id string [ref: > server.server_id]
+}
+
+Table server{
+  server_id string [pk]
+  server_name string
+  hex_color string
+}
+
+Table color{
+  hex_color string [pk]
+  name_color string
+}
+Ref: color.hex_color - server.server_id
+
+
