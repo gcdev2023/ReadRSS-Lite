@@ -3,7 +3,7 @@ import logging
 
 logger = logging.getLogger('dal')
 
-base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))  # Lấy thư mục gốc của dự án
+base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) # Lấy thư mục gốc của dự án
 db_path = os.path.join(base_dir, "db.sqlite3")
 
 class BaseDAL:
