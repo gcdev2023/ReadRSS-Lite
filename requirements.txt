@@ -1,0 +1,6 @@
+beautifulsoup4==4.12.3
+feedparser==6.0.11
+nextcord==2.6.0
+python-dotenv==1.0.1
+setuptools==73.0.1
+cloudscraper
